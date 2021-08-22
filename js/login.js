@@ -36,6 +36,7 @@ function conectar(){
     function desconectar(){
       localStorage.clear();
       location.href = "login.html";
+      signOut();
     }
 
 
