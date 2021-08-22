@@ -3,9 +3,19 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content
+  -Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
+  
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content=141894507208-ut2lqoqnmeql2u5ft4muaeps0f93aifi.apps.googleusercontent.com>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+  <script>src="js/google.js"</script>
+
   <title>eMercado - Todo lo que busques está aquí</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -13,7 +23,7 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
+   <style>
     html, body{
       height: 100%;
     }
@@ -25,29 +35,43 @@
       align-items: center;
       padding-top: 40px;
       padding-bottom: 40px;
-      background-color: #f5f5f5;
+       background-color: #f5f5f5;
+       padding-left: 40%;
     }
 
-    .signin {
+    .form-group {
+      
       width: 100%;
       max-width: 330px;
       padding: 15px;
-      margin: auto;
+      
+
     }
   </style>
 </head>
 
 <body class="text-center">
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 08/08/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <form>
+    <div class="form-group">
+      <label for="usuario">Usuario</label>
+      <input type="tex" class="form-control" id="usuario" placeholder="Usuario">
     </div>
-  </div>
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control" id="password" placeholder="ingresar password">
+    </div>
+    <button type="button" class="btn btn-primary" onClick="conectar();">Conectar</button>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-  <script src="js/init.js"></script>
-  <script src="js/login.js"></script>
+  </form>
+
+  <script type="text/javascript">    
+  let dato = JSON.parse(localStorage.getItem('dato'));
+  if (dato.estado=='conectado'){
+    location.href="index.html";
+  }
+  </script>
 </body>
+
 </html>
+

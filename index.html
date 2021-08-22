@@ -21,6 +21,10 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <button class="btn btn-primary" id="desconectar" onClick="desconectar();">Desconectar</button>
+        <h4><span id="fabri"></span></h4>
+
+
       </div>
     </nav>
     <main role="main">
@@ -105,5 +109,10 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/login.js"></script>
+    <script type="text/javascript">
+    let dato = JSON.parse(localStorage.getItem('dato'));
+      // document.getElementById('fabri').innerHTML = 'El usuario conectado es: ' + dato.usuario + '<br>' +'password: ' + dato.password;
+    </script>
   </body>
 </html>
