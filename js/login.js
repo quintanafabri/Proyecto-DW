@@ -40,7 +40,9 @@ function conectar(){
     }
 
 
-   
+    let dato = JSON.parse(localStorage.getItem('dato'));
+    document.getElementById('dropdownMenuButton').innerHTML = dato.usuario;
+
 
 
 
