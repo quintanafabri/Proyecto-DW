@@ -1,0 +1,64 @@
+#productName {
+    margin-top: 2cm;
+text-align: center;
+
+}
+#descripcionProductInfo{
+margin-left: 12cm;
+margin-top: 2cm;
+}
+#productDescription{
+    margin-left: 7cm;
+    margin-top: 12px;
+    margin-bottom: 1.3cm;
+    width:600px; 
+    height:200px;
+    text-align: left;
+size: 50px;
+}
+
+
+
+#productCost{
+margin-left: 12cm;
+
+}
+
+
+#imagenesUno{
+float: right;
+}
+
+#productImagesGallery{
+    margin-bottom: 3cm;
+}
+
+
+#calEstilo{
+    float: right;
+
+}
+
+
+#tarjetaComentarios{
+    margin-bottom: 1cm;
+
+    width: 1200px;
+}
+
+#nombreTarjeta {
+margin-right: 1cm;
+}
+
+#calificacionCarta{
+text-align: center;
+}
+
+
+#puntuacion{
+    margin-left: 22cm;
+}
+
+#comentariosGuardados{
+    margin-left: 10cm;
+}

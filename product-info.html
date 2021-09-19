@@ -13,8 +13,13 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/estrellas.css" rel="stylesheet">
+  <link href="css/product-info.css" rel="stylesheet">
 </head>
+<style>
 
+
+</style>
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
@@ -25,22 +30,61 @@
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
+
+      <h1 id="productName" ></h1>
+      <hr class="my-3">
+      <dl>
+        <h2 id="descripcionProductInfo">Descripción</h2>
+        <dd>
+          <div id="imagenesUno"></div>
+          <p id="productDescription"></p>
+        </dd>
+          <h1 id="productCost"></h1>
+
+        <dt></dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+                <hr class="my-3">
+
+
+
+          <div id="comentariosGuardados">
+
+          </div>
+
+
+
+          <div class="col-12" >
+            <div class="card" id="calificacionCarta">
+              <h5 class="card-header">Calificar</h5>
+              <div class="card-body">
+                <h5 class="card-title">Queremos tu opinion</h5>
+
+                <div class="puntuacion" id="puntuacion">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 estrellas</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 estrellas</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 estrellas</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 estrellas</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 estrellas</label>
+                </div>
+
+                <textarea name="" id="opinion" cols="100" rows="10" placeholder="Escriba aqui su comentario..."
+                spellcheck="true"></textarea>
+              <br>
+              <input id="botonComentarioNuevo" type="button" value="Enviar comentario" class="btn btn-primary" onclick="nuevoComentario()">          
+              </div>
+          </div>
+
+
+
+          
+
   </footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
