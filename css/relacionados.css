@@ -4,6 +4,8 @@
     margin: auto;
     text-align: center;
     font-family: arial;
+    flex-direction: row ltr;
+
   }
   
   .price {
