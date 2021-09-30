@@ -1,4 +1,5 @@
 let comentarios = [];
+let ProductArray = [];
 
 
 
@@ -108,6 +109,43 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
     }
     
 
+    function relacionados(){
+
+        let relacionadosArray = [];
+        let productosRelacionadosArray = [];
+        let relacionadoE = "";
+
+    
+
+        for(let i = 0; i < product.relatedProducts.length; i++){
+             relacionadosArray = product.relatedProducts[i]
+            console.log(relacionadosArray)
+       
+            productosRelacionadosArray = ProductArray[relacionadosArray];
+            console.log(productosRelacionadosArray)
+
+
+            relacionadoE += `
+            
+            
+            
+            <h2 style="text-align:center"></h2>
+            
+            <div class="card" id="cardRelacionado">
+              <img src="` + productosRelacionadosArray.imgSrc + `" alt="Denim Jeans" style="width:100%">
+              <h1>`+productosRelacionadosArray.name+`</h1>
+              <p class="price">US$`+productosRelacionadosArray.cost+`</p>
+              <p>`+productosRelacionadosArray.description+`</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+
+            
+            `
+            document.getElementById("relacionados").innerHTML = relacionadoE;
+
+        }
+    }
+
 
 
 document.addEventListener("DOMContentLoaded", function(e){
@@ -125,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
             mostrarObjetos(product);
+
         }
     });
 
@@ -135,10 +174,19 @@ document.addEventListener("DOMContentLoaded", function(e){
         comentarios = resultObj.data;
 
         mostrarComentarios(comentarios);
+
     }
 });
 
+getJSONData(PRODUCTS_URL).then(function(resultObj){
+    if (resultObj.status === "ok"){
+        ProductArray=resultObj.data;
+        relacionados();
+    }
+
 });
+});
+
 
 
 
