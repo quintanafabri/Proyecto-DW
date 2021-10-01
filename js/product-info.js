@@ -22,15 +22,21 @@ function showImagesGallery(array){
     let galeria = "";
 
 
-    for(let i = 1; i < array.length; i++){
+    for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
 
         galeria += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="`+imageSrc+`" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+        
+     
         `
 
         document.getElementById("productImagesGallery").innerHTML = galeria;
@@ -97,7 +103,7 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
     mostrarComentarios(comentarios); //Mostramos la lista.
   };
 
-
+/*
   function mostrarObjetos(){
     document.getElementById("imagenesUno").innerHTML=`
     
@@ -106,8 +112,9 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
     </div>
     
     `
+
     }
-    
+    */
 
     function relacionados(){
 
@@ -162,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
-            mostrarObjetos(product);
+        //    mostrarObjetos(product);
 
         }
     });

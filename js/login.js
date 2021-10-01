@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 
 
-    
-
 });
 
 
@@ -38,10 +36,6 @@ function conectar(){
       location.href = "login.html";
       signOut();
     }
-
-
-    let dato = JSON.parse(localStorage.getItem('dato'));
-    document.getElementById('dropdownMenuButton').innerHTML = dato.usuario;
 
 
 
