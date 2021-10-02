@@ -95,18 +95,6 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
     mostrarComentarios(comentarios); //Mostramos la lista.
   };
 
-/*
-  function mostrarObjetos(){
-    document.getElementById("imagenesUno").innerHTML=`
-    
-    <div>
-    <img src='` + product.images[0] + `'>
-    </div>
-    
-    `
-
-    }
-    */
 
     function relacionados(){
 
@@ -126,15 +114,15 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
 
             relacionadoE += `
             
-         <div class="container" >           
             <div class="card" id="cardRelacionado">
               <img src="` + productosRelacionadosArray.imgSrc + `" alt="Denim Jeans" style="width:100%">
               <h1>`+productosRelacionadosArray.name+`</h1>
               <p class="price">US$`+productosRelacionadosArray.cost+`</p>
               <p>`+productosRelacionadosArray.description+`</p>
+              <div class="container" id="botonRelacionados">
               <p><button>Add to Cart</button></p>
+              </div>
             </div>
-         </div>
 
             
             `
