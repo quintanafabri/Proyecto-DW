@@ -17,32 +17,24 @@ function calificar(num){
  };
 
 
-function showImagesGallery(array){
+function showImagesGallery(){
 
     let galeria = "";
-
-
-    for(let i = 0; i < array.length; i++){
-        let imageSrc = array[i];
-
-        galeria += `
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="`+imageSrc+`" class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div>
-
-        
-     
-        `
+    var foto = product.images;
+    var i = 0;
+    foto.forEach(foto=>{
+    if (i==0){
+        galeria+= "<div class='carousel-item active'><img class='dblock w-100' src=" + foto +" alt='" + foto + "'></div>"
+        } else{
+            galeria+= "<div class='carousel-item'><img class='dblock w-100' src=" +foto +" alt='" + foto + "'></div>"
+        }
+        i++;
+        console.log(foto)
+    });
 
         document.getElementById("productImagesGallery").innerHTML = galeria;
     }
 
-}
 
 
 function mostrarComentarios(array){
@@ -134,10 +126,7 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
 
             relacionadoE += `
             
-            
-            
-            <h2 style="text-align:center"></h2>
-            
+         <div class="container" >           
             <div class="card" id="cardRelacionado">
               <img src="` + productosRelacionadosArray.imgSrc + `" alt="Denim Jeans" style="width:100%">
               <h1>`+productosRelacionadosArray.name+`</h1>
@@ -145,6 +134,7 @@ function nuevoComentario(){    //cuando hago click en "Agregar"
               <p>`+productosRelacionadosArray.description+`</p>
               <p><button>Add to Cart</button></p>
             </div>
+         </div>
 
             
             `
@@ -193,6 +183,9 @@ getJSONData(PRODUCTS_URL).then(function(resultObj){
 
 });
 });
+
+
+
 
 
 

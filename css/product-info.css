@@ -4,11 +4,11 @@ text-align: center;
 
 }
 #descripcionProductInfo{
-margin-left: 12cm;
-margin-top: 2cm;
+
+text-align: left;
 }
 #productDescription{
-    margin-left: 7cm;
+ 
     margin-top: 12px;
     margin-bottom: 1.3cm;
     width:600px; 
@@ -20,17 +20,17 @@ size: 50px;
 
 
 #productCost{
-margin-left: 12cm;
+margin-left: 12cm;  
+margin-top: 150px;
 
 }
 
+#carouselAuto{
+    float: right;
+    width:600px; 
+    height:200px;
+    
 
-#imagenesUno{
-float: right;
-}
-
-#productImagesGallery{
-    margin-bottom: 3cm;
 }
 
 
@@ -62,3 +62,7 @@ text-align: center;
 #comentariosGuardados{
     margin-left: 10cm;
 }
+
+
+
+

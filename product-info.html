@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
+ 
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -16,6 +17,7 @@
   <link href="css/estrellas.css" rel="stylesheet">
   <link href="css/product-info.css" rel="stylesheet">
   <link href="css/relacionados.css" rel="stylesheet">
+  
 </head>
 <style>
 
@@ -43,26 +45,36 @@
     </div>
   </nav>
 
-
+   
       <h1 id="productName" ></h1>
       <hr class="my-3">
-      <dl>
+
+      <div class="container" >
+        <div class ="container" id="carouselAuto">
+        <div  class="carousel slide" data-ride="carousel" data-interval=2000>
+            <div class="carousel-inner" id="productImagesGallery">
+             </div>      
+         </div><br>
+
+      </div>
+        
         <h2 id="descripcionProductInfo">Descripción</h2>
-        <dd>
-          <div id="imagenesUno"></div>
+          
           <p id="productDescription"></p>
-        </dd>
+      
           <h1 id="productCost"></h1>
+        </div>
+          <hr class="my-3">
+    
+      
 
-        <dt></dt>
-        <dd>
-         <div id="productImagesGallery">
-          </div>
-                <hr class="my-3">
-<div id="relacionados"></div>
-          <div id="comentariosGuardados">
+         
 
-          </div>
+          <div id="relacionados"></div>
+          <div id="comentariosGuardados"></div>
+        
+
+          
 
 
 
