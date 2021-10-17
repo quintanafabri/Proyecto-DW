@@ -44,21 +44,56 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+          <a class="dropdown-item" href="cart.html">Mi Carrito<span id="mostrarCarrito" class="badge badge-pill badge-info"></span></a>
           <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
           <a class="dropdown-item" onClick="desconectar();" href="#">Desconectar</a>
-
+  
         </div>
       </div>
     </div>
+    
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  
+  <table class="table w-25 my-4">
+    <thead> <!-- Encabezado -->
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col"></th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="carrito">
+    </tbody>
+    <thead>
+      <td scope="col">Productos</td>
+      <td scope="col" id="costo"></td>
+    </thead>
+    <td>
+      <select onchange="envio()" id="mySelect">
+        <option value="0">Retira en local</option>
+        <option value="10">Envio Comun</option>
+        <option value="20">Envio Express</option>
+      </select>
+       </td>
+       <td id="CostoEnvio">Costo Envio</td>
+       <thead>
+         <td><select onchange="currency()" id="myCurrency">
+          <option  value="USD">USD</option>
+          <option value="UYU">UYU</option>
+        </select>
+  </td>
+
+        <th scope="col">Total:</th>
+        <th scope="col" id="total"></th>
+
+
+       </thead>
+
+  </table>  
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
@@ -73,6 +108,9 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+
+
+  
 </body>
 
 </html>

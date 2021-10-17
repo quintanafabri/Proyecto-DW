@@ -1,6 +1,8 @@
 var currentProductArray = [];
 var minCount = undefined;
 var maxCount = undefined;
+let category=[];
+let productoCarrito=[];
 
 
 function ORDER_ASC_BY_COST(){
@@ -60,36 +62,45 @@ function showProductList(array){
     showSpinner();
     let htmlContentToAppend = "";
     for(let i = 0; i < array.length; i++){
-        let category = array[i];
+         category = array[i];
+         productoCarrito[i]=array[i];
+
         
         if (((minCount == undefined) || (minCount != undefined && parseInt(category.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))){
-
                 htmlContentToAppend += 
                 
                 `
-                <a href="product-info.html">
                 <div class="list-group-item list-group-item-action">
                     <div class="row">
                     <div class="col-3">
                     <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
                 </div>
+
                 <div class="col">
+
                 
                     <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ category.name +  `</h4>
+                    <a href="product-info.html">
+                    <h4 class="mb-1">`+ category.name +  `</h4>
+                    </a>
+
                         <h6 style="margin:right" >$`+ category.cost + ' ' + category.currency + ` </h6>
 
                     </div>
-                    
+
                     <p class="mb-1">` + category.description + `</p>          
                     <small style="color:blue;" >` + category.soldCount + ` Vendidos</small>
+                    <button type="button" class="btn btn-primary" onclick="agregarCarrito(productoCarrito[`+[i]+`])">Agregar al carrito</button>
 
                         </div>
                     </div>
+
                 </div>
-                </a>
+
                 `
+
+
             }
 
 
